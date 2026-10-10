@@ -2,8 +2,9 @@
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY pom.xml .
+COPY settings.xml .
 COPY src ./src
-RUN mvn -q clean package -DskipTests
+RUN mvn -s settings.xml -q clean package -DskipTests
 
 # ---------- Runtime stage: 只帶 JRE + jar，映像細、啟動快 ----------
 FROM eclipse-temurin:17-jre
