@@ -1,0 +1,8 @@
+@local = http://localhost:8080
+@live = https://java-hello-world-oycq.onrender.com
+
+### hello (local)
+GET {{local}}/api/hello?name=tom
+
+### hello (live on Render)
+GET {{live}}/api/hello?name=tom
