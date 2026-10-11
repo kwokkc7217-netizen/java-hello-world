@@ -1,6 +1,7 @@
 target/
 *.class
 .idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 # sandbox VM 專用 dependency jars（正常網絡用 Maven 下載，Docker build 亦然）
 lib/
