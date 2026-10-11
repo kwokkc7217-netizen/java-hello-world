@@ -19,6 +19,6 @@ public class HelloController {
     @GetMapping("/api/hello")
     public Map<String, String> hello(@RequestParam(defaultValue = "World") String name) {
         // Spring Boot 會自動將呢個 Map 轉成 JSON 回傳
-        return Map.of("message", "Hello, " + name + "!");
+        return Map.of("message", "Hello, " + name + "! [v2]");
     }
 }
